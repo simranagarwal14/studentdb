@@ -3,15 +3,15 @@ A complete PHP and MySQL-based web application that allows users to register, lo
 ________________________________________
 🧩 Features
 •	User authentication system
-o	Registration and Login using PHP sessions
-o	Password hashing for secure login
+  o	Registration and Login using PHP sessions
+  o	Password hashing for secure login
 •	Student Management Dashboard
-o	Add new students
-o	Edit, Delete, and View student records
-o	Search bar for quick filtering
+  o	Add new students
+  o	Edit, Delete, and View student records
+  o	Search bar for quick filtering
 •	Additional pages
-o	About page
-o	Header and footer for consistent layout
+  o	About page
+  o	Header and footer for consistent layout
 •	Fully functional CRUD operations (Create, Read, Update, Delete)
 •	Organized, beginner-friendly PHP and MySQL code
 ________________________________________
