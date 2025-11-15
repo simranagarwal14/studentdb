@@ -11,7 +11,11 @@ if(isset($_POST['login'])){
     $user = $result->fetch_assoc();
     if($user && password_verify($password, $user['password'])){
         $_SESSION['user'] = $user['username'];
-        header("Location: dashboard.php");
+        if(!isset($_SESSION['seen_about'])){
+            header("Location: about.php");
+        } else {
+            header("Location: dashboard.php");
+        }
         exit;
     } else {
         echo "<p style='color:red;'>Invalid username or password!</p>";

@@ -3,25 +3,35 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Get the current page filename
 $current_page = basename($_SERVER['PHP_SELF']);
+
+$menu_items = [
+    "Login"      => "index.php",
+    "Register"   => "register.php"
+];
+
+if (isset($_SESSION['user'])) {
+    $menu_items = array_merge(
+        ["Dashboard" => "dashboard.php"],
+        $menu_items,
+        ["About" => "about.php"]
+    );
+}
+
+$links = [];
+foreach ($menu_items as $label => $file) {
+    $is_active = ($file === $current_page) ? 'active' : '';
+    $links[] = '<a href="' . htmlspecialchars($file, ENT_QUOTES) . '" class="' . $is_active . '">' . htmlspecialchars($label) . '</a>';
+}
+
+$nav_html = implode('', $links);
 ?>
-
 <header>
-    <h1>BCA Student Portal</h1>
-    <nav>
-        <a href="about.php">About</a> |
-        <a href="dashboard.php">Dashboard</a> |
-
-        <?php
-        // Show Register on login page, Login on register page
-        if($current_page == 'index.php') {
-            echo '<a href="register.php">Register</a>';
-        } elseif($current_page == 'register.php') {
-            echo '<a href="index.php">Login</a>';
-        }
-        ?>
-    </nav>
+    <div class="header-container">
+        <h1>BCA Student Portal</h1>
+        <nav>
+            <?= $nav_html ?>
+        </nav>
+    </div>
 </header>
-<hr>
- 
+

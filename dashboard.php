@@ -73,8 +73,6 @@ if (!$result) {
     </table>
 </main>
 
-<footer>
-    <p>&copy; <?= date('Y') ?> Student Portal. All Rights Reserved.</p>
-</footer>
+<?php include 'footer.php'; ?>
 </body>
 </html>
