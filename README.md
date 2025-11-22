@@ -1,5 +1,6 @@
 # 🎓 BCA Student Portal
 
+
 **Student Project - 5th Semester**
 
 Hey there! 👋 This is my **BCA Student Portal** project - a web application I built to help manage student records efficiently. It's a simple but functional portal where you can add, view, edit, and delete student information.
@@ -177,4 +178,5 @@ This is a student project - feel free to use it for learning purposes!
 If you have any questions or feedback, feel free to reach out!
 
 Happy coding! 💻✨
+
 
